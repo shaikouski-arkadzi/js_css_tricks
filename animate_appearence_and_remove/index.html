@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate appearence and remove</title>
+  <style>
+    /* До состояния открытия */
+    @starting-style {
+      .item {
+        opacity: 0;
+        height: 0;
+      }
+    }
+
+    .item {
+      background-color: blue;
+      height: 3rem;
+      display: grid;
+      overflow: hidden;
+      transition: opacity .5s, transform .5s, height .5s, display .5s;
+
+      transition-behavior: allow-discrete;
+    }
+
+    .is-deleting {
+      opacity: 0;
+      height: 0;
+      display: none;
+      transform: translateX(-25vw);
+    }
+  </style>
+</head>
+<body>
+  <button>Toggle</button>
+  <div class="item"></div>
+  <script>
+    document.querySelector('button').addEventListener('click', ()=> {
+      document.querySelector('.item').classList.toggle('is-deleting');
+    })
+  </script>
+</body>
+</html>
