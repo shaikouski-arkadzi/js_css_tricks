@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate grid</title>
+  <style>
+    .content {
+      display: grid;
+      grid-template-columns: 0fr;
+      overflow: hidden;
+      transition: grid-template-columns .3s ease-in;
+    }
+
+    .content.open {
+      grid-template-columns: 1fr;
+    }
+
+    .text-wrapper {
+      min-height: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="text-wrapper">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, aliquam consectetur perferendis eius itaque earum quae illo deleniti blanditiis, porro at error dicta corporis, voluptates debitis! Reiciendis at ad ratione.
+    </div>
+  </div>
+</body>
+</html>
