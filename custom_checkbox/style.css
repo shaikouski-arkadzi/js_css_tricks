@@ -1,0 +1,41 @@
+body {
+  display: flex;
+}
+
+input, label {
+  font-size: 2em;
+}
+
+input[type="checkbox"] {
+  /* Сбрасываем базовый вид чекбокса */
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+input:before {
+  /* Нужно растянуть псевдоэлемент на всю плоскость */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  /* Нужно для того чтобы в состояниях менять цвет через color */
+  background-color: currentColor;
+  /* нужно задать изначальную маску для transition */
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"></svg>') center / 100%;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out, mask 0s 0.2s ease-in-out;
+}
+
+/* селектор должен быть  */
+input:checked:before {
+  /* добавляем галочку в состоянии checked */
+  mask: url('https://img.icons8.com/?size=100&id=sz8cPVwzLrMP&format=png&color=000000') no-repeat center / 100%;
+  color: #fff;
+  transform: scale(1);
+}
