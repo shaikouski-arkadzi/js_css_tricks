@@ -1,0 +1,44 @@
+body {
+  display: flex;
+}
+
+input, label {
+  font-size: 2em;
+}
+
+input[type="radio"] {
+  /* Сбрасываем базовый вид чекбокса */
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  color: #fff;
+  position: relative;
+  transition: box-shadow 0.02s, background-color 0.02s;
+  box-shadow: inset 0 0 0 0.25rem #e0e0e0;
+}
+
+input[type="radio"]:before {
+  /* Нужно растянуть псевдоэлемент на всю плоскость и подготовить к анимации внутренний кружок */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transition: transform 0.02s;
+  border-radius: 100%;
+  /* Нужно для того чтобы в состояниях менять цвет через color */
+  background-color: currentColor;
+  transform: scale(0);
+}
+
+input[type="radio"]:checked {
+  /* Раскрашиваем контрол на checked */
+  background-color: #383ad1;
+  box-shadow: none;
+}
+
+input[type="radio"]:checked:before {
+  transform: scale(0.3);
+}
