@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom toggle</title>
+  <style>
+    input[type="checkbox"][role="toggle"] {
+      /* Сбрасываем стандарный вид и рисуем силуэт тогла */
+      appearance: none;
+      position: relative;
+      width: 2.75rem;
+      height: 1.5rem;
+      border-radius: 0.75rem;
+      background-color: #0e0e0e;
+      color: #fff;
+      transition: background-color .2s ease-in-out,
+                  color .2s ease-in-out;
+    }
+
+    input[type="checkbox"][role="toggle"]::after {
+      /* Рисуем внутренний кружок */
+      content: '';
+      position: absolute;
+      background-color: currentColor;
+      border-radius: 50%;
+      transform: translateX(0.125rem);
+      width: 1.25rem;
+      height: 1.25rem;
+      top: calc(50% - (1.25rem / 2));
+      transition: transform .2s ease-in-out;
+    }
+
+    input[type="checkbox"][role="toggle"]:checked {
+      /* При checked задник перекрашиваем */
+      background-color: #383ad1;
+      color: #fff;
+    }
+
+    input[type="checkbox"][role="toggle"]:checked::after {
+      /* При checked сдвигаем кружок вправо */
+      transform: translateX(calc(100% + 0.125rem));
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" role="toggle">
+</body>
+</html>
