@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom chip</title>
+  <style>
+    input[role="chip"] {
+      /* Скрываем и растягиваем инпут */
+      appearance: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    chip {
+      /* Отрисовываем чипсы */
+      background-color: #ccc;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      position: relative;
+      transition: background-color .2s ease-in-out,
+                  color .1s ease-in-out;
+    }
+
+    chip:has(input:checked) {
+      background-color: #383ad1;
+      color: #fff;
+    }
+
+    chip:has(input:disabled) {
+      background-color: #b7b8ee;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <chip>
+    <input type="checkbox" role="chip" checked>
+    Лейбл
+  </chip>
+  <chip>
+    <input type="checkbox" role="chip" checked>
+    Лейбл
+  </chip>
+</body>
+</html>
