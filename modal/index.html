@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <a href="#" class="js-toggle-modal" data-target="#modal_1"> call modal</a>
+
+      <div class="modal__overlay" id="modal_1">
+        <div class="modal">
+          <button
+            class="modal__close js-toggle-modal"
+            data-target="#modal_1"
+            type="button"
+          ></button>
+
+          <div class="modal__title">Modal title</div>
+          <p class="modal__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            molestias nisi nobis quod sequi veritatis!
+          </p>
+
+          <div class="rect"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
