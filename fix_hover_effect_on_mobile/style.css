@@ -1,0 +1,11 @@
+@media (hover: hover) {
+  button:hover {
+    background-color: grey;
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    background-color: grey;
+  }
+}
