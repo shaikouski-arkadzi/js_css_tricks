@@ -1,0 +1,10 @@
+section {
+  height: 100vh;
+}
+
+.bg-img {
+  background: url('https://img.freepik.com/free-photo/river-surrounded-by-forests-cloudy-sky-thuringia-germany_181624-30863.jpg?t=st=1735561386~exp=1735564986~hmac=38b2c6f7337de169cfd7d7c6ad662f9b021bc9f98ab6aa3ccc531e2143270e7a&w=1060')
+    center/cover
+    no-repeat;
+  background-attachment: fixed;
+}
