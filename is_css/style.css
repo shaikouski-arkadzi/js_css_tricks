@@ -1,0 +1,9 @@
+/*
+  nav a,
+  footer a
+  form a {
+  }
+*/
+:is(nav, footer, form) a {
+  color: #000;
+}
