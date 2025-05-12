@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+  background: url('assets/bg.jpg') center / cover no-repeat;
+}
+
+.boards {
+  display: flex;
+  width: 100%;
+}
+
+.boards__item {
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  max-width: 250px;
+  width: 100%;
+  background-color: #00000080;
+  margin: 0 15px;
+  padding: 10px;
+  transition: all .3s ease;
+  border-radius: 3px;
+}
+
+.title {
+  padding: 5px;
+  color: white;
+}
+
+.title:focus {
+  outline: 1px solid #a8a8a873;
+}
+
+.list {
+  min-height: 40px;
+}
+
+.list__item {
+  background-color: #fefefe;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  margin: 4px 0;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+.form {
+  border-radius: 3px;
+  margin-top: auto;
+}
+
+textarea {
+  resize: none;
+  height: 60px;
+  border-radius: 3px;
+  border: none;
+  background: white;
+  padding: 10px;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+}
+
+.add-item-btn,
+.cancel-item-btn,
+.create-board {
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-item-btn {
+  background: #0d88da;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.cancel-item-btn {
+  padding: 0 10px;
+  background: #a0110c;
+  width: 75px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.create-btn button {
+  height: 30px;
+  background: #9b9b9b4d;
+  border-radius: 3px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 10px;
+  color: white;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.create-btn button span {
+  font-size: 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+.create-board {
+  background: #1382cc9e;
+  width: 150px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
