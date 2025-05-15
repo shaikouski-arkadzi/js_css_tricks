@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+}
+
+main {
+  overflow-y: scroll;
+  width: 100%;
+  margin-left: 300px;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+.progress {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 30px;
+}
+
+.progress__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: blue;
+  border-radius: inherit;
+  transition: width .3s;
+}
+
+nav {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  flex-direction: column;
+  gap: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid black;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav__link {
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.nav__link.active {
+  color: red;
+}
+
+.section {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}
