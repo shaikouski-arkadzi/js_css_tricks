@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>scrollbar-gutter: stable</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        height: 300px;
+        overflow-y: auto;
+        scrollbar-gutter: stable;
+      }
+
+      .content {
+        height: 800px;
+        background: linear-gradient(white, lightgray);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Пример: scrollbar-gutter: stable</h2>
+    <div class="container">
+      <div class="content">
+        Резервируется место для полосы прокрутки, даже если она не отображается.
+        Это полезно, чтобы не было "прыжка" макета при появлении прокрутки.
+      </div>
+    </div>
+  </body>
+</html>
