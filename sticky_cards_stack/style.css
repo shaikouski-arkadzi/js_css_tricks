@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+p + p {
+  margin-top: 30px;
+}
+
+.cards-wrapper {
+  margin: 50px 0;
+}
+
+.card {
+  position: sticky;
+  top: 20px;
+  margin-bottom: 20px;
+  background-color: #626262;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.7s ease, filter 0.7s ease;
+  z-index: 1;
+  border: 1px solid aliceblue;
+}
+
+.card.pushed {
+  transform: scale(0.9);
+  filter: blur(3px);
+  z-index: 0;
+}
